@@ -42,12 +42,14 @@ export default function Navbar({ onStartMeeting }) {
                     : 'bg-white dark:bg-[#0F111A] border-b border-gray-100 dark:border-white/10'}`}
     >
       {/* Logo + Brand */}
-      <Link to="/" className="flex items-center gap-2.5 group">
-        <img
-          src="/logo.png"
-          alt="Echo Meet"
-          className="w-16 h-16 scale-125 object-contain group-hover:scale-150 transition-transform duration-300"
-        />
+      <Link to="/" className="flex items-center gap-3 group">
+        <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-xl overflow-hidden bg-transparent dark:bg-white transition-transform duration-300 group-hover:scale-110">
+          <img
+            src="/logo.png"
+            alt="Echo Meet"
+            className="w-14 h-14 scale-[1.35] object-contain"
+          />
+        </div>
         <span className="text-xl font-bold tracking-tight text-[#1E1A3C] dark:text-white">
           Echo <span className="text-[#2563EB] dark:text-blue-400">Meet</span>
         </span>
