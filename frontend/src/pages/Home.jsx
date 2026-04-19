@@ -6,74 +6,123 @@ import RoomModal from '../components/RoomModal'
 const features = [
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M15.536 8.464a5 5 0 010 7.072M12 18.657A9 9 0 1112 5.343m0 13.314V12m0 0V5.343" />
+      </svg>
+    ),
+    title: 'AI Real-Time Noise Cancellation',
+    desc: 'Removes background sounds like traffic, typing, and static with advanced AI algorithms for crystal-clear audio.',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
           d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
-    color: 'em-pink',
-    colorHex: '#E91E8C',
-    title: 'AI Transcription',
-    desc: 'Every word captured in real time. Fully searchable, speaker-labeled, and accurate — so you never miss a detail.',
+    title: 'AI Meeting Assistant',
+    desc: 'Real-time transcription, speaker labels, and smart meeting summaries powered by advanced AI.',
   },
   {
     icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
-    color: 'em-teal',
-    colorHex: '#2DBFB8',
-    title: 'Smart Summary',
-    desc: 'AI distills your entire meeting into a crisp executive summary — ready to share the moment you hang up.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-      </svg>
-    ),
-    color: 'em-blue',
-    colorHex: '#2D7DD2',
-    title: 'Ask Your Meeting',
-    desc: 'Chat with your meeting after it ends. Ask questions, get answers, and extract exactly what you need.',
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-    color: 'em-orange',
-    colorHex: '#F47C2B',
-    title: 'Action Items',
-    desc: 'Automatically extracted tasks, owners, and deadlines from your conversation — no manual follow-up needed.',
+    title: 'Smart Collaboration Tools',
+    desc: 'High-quality audio/video, chat, screen sharing, and interactive whiteboard for seamless teamwork.',
   },
 ]
 
 const steps = [
   {
-    n: '01',
-    title: 'Create a Room',
-    desc: 'Click "Start Free Meeting." Echo Meet instantly generates a secure video room — no downloads, no setup.',
+    n: 1,
+    title: 'Create or Join a Meeting',
+    desc: 'Start a new meeting instantly or join with a simple link. No downloads required.',
   },
   {
-    n: '02',
-    title: 'Meet & Discuss',
-    desc: 'Invite your team with a single link. Our AI joins silently in the background, capturing everything.',
+    n: 2,
+    title: 'AI Filters Noise in Real Time',
+    desc: 'Our AI automatically identifies and removes background noise while you speak.',
   },
   {
-    n: '03',
-    title: 'Get Your Summary',
-    desc: 'The moment the call ends, you receive a full transcript, a concise summary, and prioritized action items.',
+    n: 3,
+    title: 'Receive Summary & Transcripts',
+    desc: 'Get instant AI-generated transcripts and meeting summaries after each call.',
+  },
+]
+
+const overviewTabs = [
+  {
+    id: 'room',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+      </svg>
+    ),
+    label: 'Meeting Room Interface',
+  },
+  {
+    id: 'transcript',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+    label: 'AI Transcript',
+  },
+  {
+    id: 'whiteboard',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    ),
+    label: 'Whiteboard',
+  },
+  {
+    id: 'chat',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+      </svg>
+    ),
+    label: 'Chat Panel',
+  },
+]
+
+const audiences = [
+  {
+    icon: '🎓',
+    title: 'Education',
+    desc: 'Perfect for online classes, lectures, and student collaboration with AI note-taking.',
+  },
+  {
+    icon: '💼',
+    title: 'Business Teams',
+    desc: 'Run efficient stand-ups, client calls, and project reviews with auto-generated action items.',
+  },
+  {
+    icon: '🎨',
+    title: 'Creative Teams',
+    desc: 'Brainstorm ideas freely using the whiteboard and chat while AI captures everything.',
+  },
+  {
+    icon: '🏥',
+    title: 'Healthcare',
+    desc: 'Secure, noise-free telehealth consultations with accurate AI transcription.',
   },
 ]
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false)
+  const [activeTab, setActiveTab] = useState('room')
   const navigate = useNavigate()
 
   function handleConfirm({ meeting_id, room_name, room_url }) {
@@ -82,159 +131,145 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-em-dark font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-white dark:bg-[#0F111A] font-sans overflow-x-hidden transition-colors duration-300">
       <Navbar onStartMeeting={() => setShowModal(true)} />
 
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 overflow-hidden">
-        {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-em-pink/20 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-em-teal/15 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-em-blue/10 rounded-full blur-[160px] pointer-events-none" />
+      <section className="pt-28 pb-20 px-6 md:px-16 max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Left copy */}
+          <div className="flex-1 text-left">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-[#1E1A3C] dark:text-white mb-5">
+              Crystal Clear Meetings,{' '}
+              <br className="hidden md:block"/>
+              <span className="text-gradient-blue dark:text-white">Powered by AI.</span>
+            </h1>
+            <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-lg mb-8">
+              Experience distraction-free video calls with real-time noise cancellation,
+              automated transcripts, and smart meeting summaries.
+            </p>
 
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/5 border border-white/15 rounded-full px-4 py-2 mb-8 text-sm font-medium">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-em-pink opacity-75" />
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-em-pink" />
-          </span>
-          AI-Powered Video Conferencing — Now Live
-        </div>
-
-        {/* Headline */}
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 max-w-5xl">
-          Meetings that{' '}
-          <span className="text-gradient">think for you</span>
-        </h1>
-        <p className="text-lg md:text-xl text-white/60 max-w-2xl mb-12 leading-relaxed">
-          Echo Meet combines crystal-clear video conferencing with real-time AI transcription,
-          instant smart summaries, and auto-extracted action items.
-          <strong className="text-white/90"> Stop taking notes. Start making decisions.</strong>
-        </p>
-
-        {/* CTA group */}
-        <div className="flex flex-col sm:flex-row gap-4 items-center">
-          <button
-            id="hero-start-meeting"
-            onClick={() => setShowModal(true)}
-            className="btn-cta text-lg px-10 py-5 glow-pink"
-          >
-            Start Free Meeting →
-          </button>
-          <a
-            href="#how-it-works"
-            className="btn-outline text-base"
-          >
-            See How It Works
-          </a>
-        </div>
-
-        {/* Social proof */}
-        <div className="mt-16 flex items-center gap-6 text-sm text-white/40">
-          <span className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-em-teal" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-            </svg>
-            No downloads
-          </span>
-          <span className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-em-teal" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-            </svg>
-            No credit card
-          </span>
-          <span className="flex items-center gap-2">
-            <svg className="w-4 h-4 text-em-teal" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
-            </svg>
-            End-to-end encrypted
-          </span>
-        </div>
-
-        {/* Hero mockup card */}
-        <div className="mt-20 w-full max-w-4xl mx-auto glass-card overflow-hidden">
-          <div className="bg-em-dark/60 px-4 py-3 border-b border-white/10 flex items-center gap-3">
-            <div className="flex gap-1.5">
-              <div className="w-3 h-3 rounded-full bg-red-500/60" />
-              <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-              <div className="w-3 h-3 rounded-full bg-green-500/60" />
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <button
+                id="hero-start-meeting"
+                onClick={() => setShowModal(true)}
+                className="btn-cta text-base px-8 py-4"
+              >
+                Start Free Meeting
+              </button>
+              <button className="btn-outline flex items-center justify-center gap-2 text-base px-6 py-4">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Watch Demo
+              </button>
             </div>
-            <div className="flex-1 flex items-center gap-2 bg-white/5 rounded-lg px-3 py-1 text-xs text-white/40">
-              🔒 echomeet.daily.co/SwiftFalcon3472
-            </div>
-            <div className="flex items-center gap-1.5 text-xs text-em-teal">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-em-teal opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-em-teal" />
+
+            <div className="flex items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+                No credit card required
               </span>
-              Live
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+                </svg>
+                Free for unlimited meetings
+              </span>
             </div>
           </div>
-          <div className="relative aspect-video bg-gradient-to-br from-[#1a1640] to-[#0f0c28] flex items-center justify-center">
-            {/* Simulated video tiles */}
-            <div className="grid grid-cols-2 gap-4 w-full h-full p-6">
-              {[
-                { name: 'Alex M.', color: '#E91E8C', initials: 'AM' },
-                { name: 'Sara K.', color: '#2DBFB8', initials: 'SK' },
-                { name: 'James R.', color: '#2D7DD2', initials: 'JR' },
-                { name: 'Maya L.', color: '#F47C2B', initials: 'ML' },
-              ].map((p, i) => (
-                <div key={i} className="relative rounded-xl overflow-hidden bg-[#12102a] border border-white/10 flex items-center justify-center">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold"
-                    style={{ background: p.color + '30', border: `2px solid ${p.color}` }}
-                  >
-                    {p.initials}
-                  </div>
-                  <div className="absolute bottom-2 left-2 bg-black/60 rounded px-2 py-0.5 text-xs">{p.name}</div>
-                  {i === 0 && (
-                    <div className="absolute top-2 right-2 flex items-center gap-1 bg-em-pink/20 border border-em-pink/30 rounded-full px-2 py-0.5 text-xs text-em-pink">
-                      <span className="w-1.5 h-1.5 rounded-full bg-em-pink animate-pulse" />
-                      Speaking
-                    </div>
-                  )}
+
+          {/* Right hero card */}
+          <div className="flex-1 w-full max-w-lg">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-white/10 bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0f172a]"
+                 style={{ aspectRatio: '4/3' }}>
+              {/* Noise suppression badge */}
+              <div className="absolute top-4 right-4 z-20 flex items-center gap-2
+                              bg-white dark:bg-white/10 dark:backdrop-blur-md rounded-full px-3 py-2 shadow-lg text-xs font-semibold text-gray-800 dark:text-white dark:border dark:border-white/10">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                Noise Suppression Active
+              </div>
+
+              {/* Mock video content */}
+              <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
+                {/* Decorative waves */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-60">
+                  {[...Array(5)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute rounded-full border border-blue-400/30"
+                      style={{
+                        width: `${(i + 1) * 90}px`,
+                        height: `${(i + 1) * 90}px`,
+                        animation: `ping ${1.5 + i * 0.3}s cubic-bezier(0,0,0.2,1) infinite`,
+                        animationDelay: `${i * 0.2}s`,
+                        opacity: 0.4 - i * 0.07,
+                      }}
+                    />
+                  ))}
                 </div>
-              ))}
-            </div>
-            {/* AI badge overlay */}
-            <div className="absolute bottom-4 right-4 flex items-center gap-2 bg-em-dark/90 border border-em-teal/30 rounded-full px-3 py-1.5 text-xs text-em-teal font-medium">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-em-teal opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-em-teal" />
-              </span>
-              AI is listening…
+
+                {/* Center mic icon */}
+                <div className="relative z-10 w-20 h-20 rounded-full bg-orange-500/80 flex items-center justify-center shadow-lg shadow-orange-500/40">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+                      d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 3a4 4 0 00-4 4v4a4 4 0 008 0V7a4 4 0 00-4-4z" />
+                  </svg>
+                </div>
+
+                {/* Laptop icon right */}
+                <div className="absolute right-8 bottom-12 w-14 h-14 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">
+                  <svg className="w-7 h-7 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
+                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Bottom text */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent p-5 pt-12 text-center">
+                <p className="text-white font-bold text-lg leading-tight">
+                  Noise Reduced. Focus Renewed.<br />Crystal Clear Online Meetings.
+                </p>
+              </div>
+
+              {/* Bottom-right arrow */}
+              <div className="absolute bottom-3 right-3 w-7 h-7 rounded-full bg-white/10 flex items-center justify-center">
+                <svg className="w-3.5 h-3.5 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ── FEATURES ─────────────────────────────────────────────────────── */}
-      <section id="features" className="py-32 px-6 bg-white">
+      <section id="features" className="py-24 px-6 md:px-16 bg-[#f8fafc] dark:bg-[#0F111A]">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-em-pink font-semibold text-sm uppercase tracking-widest mb-3">Powered by AI</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#1E1A3C] mb-4">
-              Everything your meeting needs
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E1A3C] dark:text-white mb-3">
+              Powerful Features for Modern Teams
             </h2>
-            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              From the first hello to the final action item — Echo Meet handles it all, automatically.
+            <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">
+              Experience the next generation of online meetings with AI-powered tools designed
+              to enhance every conversation.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((f, i) => (
-              <div
-                key={i}
-                className="group p-8 rounded-2xl border border-gray-100 bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-default"
-              >
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: f.colorHex + '15', color: f.colorHex }}
-                >
+              <div key={i} className="light-card p-8">
+                <div className="icon-wrap">
                   {f.icon}
                 </div>
-                <h3 className="text-lg font-bold text-[#1E1A3C] mb-2">{f.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+                <h3 className="text-lg font-bold text-[#1E1A3C] dark:text-white mb-2">{f.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -242,74 +277,200 @@ export default function Home() {
       </section>
 
       {/* ── HOW IT WORKS ─────────────────────────────────────────────────── */}
-      <section id="how-it-works" className="py-32 px-6 bg-em-dark relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-em-pink/10 rounded-full blur-[140px]" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-em-blue/10 rounded-full blur-[140px]" />
-        </div>
-
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
-            <p className="text-em-orange font-semibold text-sm uppercase tracking-widest mb-3">Simple by design</p>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
-              Three steps to <span className="text-gradient">smarter meetings</span>
+      <section id="how-it-works" className="py-24 px-6 md:px-16 bg-white dark:bg-[#0F111A]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E1A3C] dark:text-white mb-3">
+              How It Works
             </h2>
+            <p className="text-gray-500 dark:text-gray-400">
+              Get started in three simple steps and experience AI-powered meetings.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {/* Connecting line */}
+            <div className="hidden md:block absolute top-10 left-[calc(16.67%+24px)] right-[calc(16.67%+24px)] h-px bg-gradient-to-r from-gray-200 via-blue-200 to-gray-200 dark:from-white/10 dark:via-blue-500/50 dark:to-white/10" />
+
             {steps.map((s, i) => (
-              <div key={i} className="relative group">
-                {/* Connector line */}
-                {i < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-8 left-[calc(100%_-_1rem)] w-8 h-px bg-gradient-to-r from-em-pink to-em-orange z-10" />
-                )}
-                <div className="glass-card p-8 group-hover:border-em-pink/30 transition-colors duration-300">
-                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center bg-cta-gradient text-white text-xl font-black mb-6 shadow-lg">
-                    {s.n}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{s.title}</h3>
-                  <p className="text-white/60 leading-relaxed text-sm">{s.desc}</p>
+              <div key={i} className="light-card p-8 text-center relative">
+                <div className="w-14 h-14 rounded-full bg-[#2563EB] text-white text-xl font-black
+                                flex items-center justify-center mx-auto mb-6 shadow-md shadow-blue-200 dark:shadow-blue-500/20 relative z-10">
+                  {s.n}
                 </div>
+                <h3 className="text-lg font-bold text-[#1E1A3C] dark:text-white mb-2">{s.title}</h3>
+                <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── OVERVIEW ─────────────────────────────────────────────────────── */}
+      <section id="overview" className="py-24 px-6 md:px-16 bg-[#f8fafc] dark:bg-[#0F111A]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E1A3C] dark:text-white mb-3">
+              Everything You Need in One Platform
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">
+              A complete suite of tools designed to make your meetings more productive and efficient.
+            </p>
+          </div>
+
+          {/* Tab bar */}
+          <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl shadow-sm overflow-hidden">
+            <div className="flex overflow-x-auto border-b border-gray-100 dark:border-white/10">
+              {overviewTabs.map(tab => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`flex items-center gap-2 px-5 py-4 text-sm font-medium whitespace-nowrap transition-colors duration-200
+                    ${activeTab === tab.id
+                      ? 'text-[#2563EB] dark:text-blue-400 border-b-2 border-[#2563EB] dark:border-blue-400 bg-blue-50/50 dark:bg-blue-500/10'
+                      : 'text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white'}`}
+                >
+                  {tab.icon}
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab content */}
+            <div className="p-6">
+              {activeTab === 'room' && (
+                <div className="rounded-xl overflow-hidden bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-gray-100 dark:border-white/10"
+                     style={{ height: 340 }}>
+                  <div className="grid grid-cols-2 h-full gap-3 p-4">
+                    {[
+                      { name: 'Alex M.', color: '#E91E8C', initials: 'AM', speaking: true },
+                      { name: 'Sara K.', color: '#2DBFB8', initials: 'SK', speaking: false },
+                      { name: 'James R.', color: '#2563EB', initials: 'JR', speaking: false },
+                      { name: 'Maya L.', color: '#F47C2B', initials: 'ML', speaking: false },
+                    ].map((p, i) => (
+                      <div key={i} className="relative rounded-xl bg-[#1e293b] border border-white/10 flex items-center justify-center">
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                             style={{ background: p.color + '40', border: `2px solid ${p.color}` }}>
+                          {p.initials}
+                        </div>
+                        <div className="absolute bottom-2 left-2 text-xs text-white/70 bg-black/40 px-2 py-0.5 rounded">{p.name}</div>
+                        {p.speaking && (
+                          <div className="absolute top-2 right-2 flex items-center gap-1 bg-pink-500/20 border border-pink-500/30 rounded-full px-2 py-0.5 text-xs text-pink-400">
+                            <span className="w-1.5 h-1.5 rounded-full bg-pink-400 animate-pulse" />
+                            Speaking
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {activeTab === 'transcript' && (
+                <div className="rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 p-6 space-y-4" style={{ height: 340 }}>
+                  {[
+                    { name: 'John Doe', text: "Let's discuss the Q4 roadmap and our priorities for next quarter." },
+                    { name: 'Jane Smith', text: "I agree, we should prioritize the AI features and get them shipped." },
+                    { name: 'Alex M.', text: "The noise cancellation update is almost ready for testing." },
+                  ].map((line, i) => (
+                    <div key={i} className="bg-white dark:bg-[#0b0f19] border border-gray-100 dark:border-white/10 rounded-xl p-4 shadow-sm dark:shadow-none">
+                      <p className="text-sm font-semibold text-[#1E1A3C] dark:text-white mb-1">{line.name}</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{line.text}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {activeTab === 'whiteboard' && (
+                <div className="rounded-xl bg-white dark:bg-[#0b0f19] border border-gray-200 dark:border-white/10 flex items-center justify-center" style={{ height: 340 }}>
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-full border-4 border-[#2563EB] dark:border-blue-500 mx-auto mb-4" />
+                    <div className="w-32 h-2 bg-[#2563EB] dark:bg-blue-500 rounded mx-auto mb-2" />
+                    <div className="w-20 h-2 bg-gray-200 dark:bg-gray-700 rounded mx-auto" />
+                  </div>
+                </div>
+              )}
+              {activeTab === 'chat' && (
+                <div className="rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 p-6 space-y-3" style={{ height: 340 }}>
+                  {[
+                    { msg: 'Great presentation! 👏', self: true },
+                    { msg: 'Thanks everyone!', self: false },
+                    { msg: 'Can we schedule a follow-up?', self: true },
+                    { msg: 'Sure, let\'s set it for next Tuesday.', self: false },
+                  ].map((m, i) => (
+                    <div key={i} className={`flex ${m.self ? 'justify-end' : 'justify-start'}`}>
+                      <div className={`rounded-xl px-4 py-2 text-sm max-w-xs
+                        ${m.self
+                          ? 'bg-[#2563EB] text-white'
+                          : 'bg-white dark:bg-[#0b0f19] border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-300'}`}>
+                        {m.msg}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── OUR AUDIENCE ────────────────────────────────────────────────── */}
+      <section id="audience" className="py-24 px-6 md:px-16 bg-white dark:bg-[#0F111A]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#1E1A3C] dark:text-white mb-3">
+              Built for Every Team
+            </h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-lg mx-auto">
+              Echo Meet adapts to your unique needs, whether you're teaching, collaborating, or presenting.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {audiences.map((a, i) => (
+              <div key={i} className="light-card p-7 text-center group">
+                <div className="text-4xl mb-4">{a.icon}</div>
+                <h3 className="text-base font-bold text-[#1E1A3C] dark:text-white mb-2">{a.title}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{a.desc}</p>
               </div>
             ))}
           </div>
 
-          {/* Final CTA */}
-          <div className="text-center mt-16">
+          <div className="text-center mt-12">
             <button
               id="section-start-meeting"
               onClick={() => setShowModal(true)}
-              className="btn-cta text-lg px-12 py-5 glow-pink"
+              className="btn-cta text-base px-10 py-4"
             >
-              Start Your First Meeting — It's Free
+              Start Your Free Meeting →
             </button>
           </div>
         </div>
       </section>
 
       {/* ── FOOTER ───────────────────────────────────────────────────────── */}
-      <footer className="bg-[#130f2a] border-t border-white/10 py-12 px-6">
+      <footer className="bg-[#f8fafc] dark:bg-[#0b0f19] border-t border-gray-100 dark:border-white/10 py-10 px-6 transition-colors duration-300">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Echo Meet" className="w-8 h-8" />
-            <span className="font-bold text-white/90">Echo <span className="text-gradient">Meet</span></span>
+          <div className="flex items-center gap-2.5">
+            <img src="/logo.png" alt="Echo Meet" className="w-16 h-16 scale-125 object-contain" />
+            <span className="font-bold text-[#1E1A3C] dark:text-white">
+              Echo <span className="text-[#2563EB] dark:text-blue-400">Meet</span>
+            </span>
           </div>
-          <p className="text-sm text-white/30">© {new Date().getFullYear()} Echo Meet. Built with AI. All rights reserved.</p>
-          <div className="flex items-center gap-2 text-xs text-white/30">
-            <svg className="w-4 h-4 text-em-teal" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd" />
+          <p className="text-sm text-gray-400 dark:text-gray-500">
+            © {new Date().getFullYear()} Echo Meet. Built with AI. All rights reserved.
+          </p>
+          <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
+            <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd"
+                d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                clipRule="evenodd" />
             </svg>
             End-to-end encrypted
           </div>
         </div>
       </footer>
 
-      {/* Modal */}
       {showModal && (
-        <RoomModal
-          onConfirm={handleConfirm}
-          onClose={() => setShowModal(false)}
-        />
+        <RoomModal onConfirm={handleConfirm} onClose={() => setShowModal(false)} />
       )}
     </div>
   )

@@ -46,27 +46,33 @@ export default function RoomModal({ onConfirm, onClose }) {
   return (
     <div
       className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-      style={{ background: 'rgba(15, 12, 40, 0.85)', backdropFilter: 'blur(8px)' }}
+      style={{ background: 'rgba(15,23,42,0.5)', backdropFilter: 'blur(6px)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="glass-card w-full max-w-md p-8 animate-[fadeInScale_0.25s_ease-out]">
+      <div
+        className="bg-white dark:bg-[#1E1A3C] w-full max-w-md rounded-2xl shadow-2xl p-8 border border-gray-100 dark:border-white/10"
+        style={{ animation: 'fadeInScale 0.25s ease-out' }}
+      >
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <img src="/logo.svg" alt="Echo Meet" className="w-9 h-9" />
-            <h2 className="text-xl font-bold">New Meeting</h2>
+            <img src="/logo.png" alt="Echo Meet" className="w-16 h-16 scale-125 object-contain" />
+            <div>
+              <h2 className="text-lg font-bold text-[#1E1A3C] dark:text-white">New Meeting</h2>
+              <p className="text-xs text-gray-400 dark:text-gray-500">Echo Meet</p>
+            </div>
           </div>
           <button
             id="modal-close"
             onClick={onClose}
-            className="text-white/40 hover:text-white/80 text-2xl leading-none transition-colors"
+            className="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-white text-2xl leading-none transition-colors w-8 h-8 flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-white/10"
           >
             ×
           </button>
         </div>
 
         {/* Room name */}
-        <label className="block text-sm font-medium text-white/60 mb-2">
+        <label className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
           Room Name
         </label>
         <input
@@ -75,43 +81,45 @@ export default function RoomModal({ onConfirm, onClose }) {
           value={roomName}
           onChange={(e) => setRoomName(e.target.value)}
           onKeyDown={handleKeyDown}
-          className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white
-                     placeholder:text-white/30 focus:outline-none focus:border-em-pink/60
-                     focus:ring-2 focus:ring-em-pink/20 transition-all duration-200 mb-2 font-mono"
+          className="w-full bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 text-[#1E1A3C] dark:text-white
+                     placeholder:text-gray-400 dark:placeholder:text-gray-600 focus:outline-none focus:border-[#2563EB] dark:focus:border-blue-500
+                     focus:ring-2 focus:ring-[#2563EB]/20 transition-all duration-200 mb-2 font-mono text-sm"
           autoFocus
         />
         <button
           onClick={() => setRoomName(generateRoomName())}
-          className="text-xs text-em-teal hover:text-em-teal/70 transition-colors mb-6"
+          className="text-xs text-[#2563EB] dark:text-blue-400 hover:text-[#1d4ed8] dark:hover:text-blue-300 transition-colors mb-5"
         >
           ↺ Generate new name
         </button>
 
         {/* Error */}
         {error && (
-          <div className="bg-red-500/20 border border-red-500/30 rounded-xl px-4 py-3 text-red-300 text-sm mb-4">
+          <div className="bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 rounded-xl px-4 py-3 text-red-600 dark:text-red-400 text-sm mb-4">
             {error}
           </div>
         )}
 
-        {/* Info row */}
-        <div className="flex items-center gap-3 bg-em-teal/10 border border-em-teal/20 rounded-xl px-4 py-3 mb-6">
-          <svg className="w-4 h-4 text-em-teal flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+        {/* Info */}
+        <div className="flex items-center gap-3 bg-blue-50 dark:bg-blue-500/10 border border-blue-100 dark:border-blue-500/20 rounded-xl px-4 py-3 mb-6">
+          <svg className="w-4 h-4 text-[#2563EB] dark:text-blue-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd"
+              d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+              clipRule="evenodd" />
           </svg>
-          <p className="text-xs text-em-teal/80">AI will automatically transcribe and summarize your meeting.</p>
+          <p className="text-xs text-[#2563EB] dark:text-blue-400">AI will automatically transcribe and summarize your meeting.</p>
         </div>
 
         {/* Actions */}
         <div className="flex gap-3">
-          <button id="modal-cancel" onClick={onClose} className="btn-outline flex-1">
+          <button id="modal-cancel" onClick={onClose} className="btn-outline flex-1 py-3">
             Cancel
           </button>
           <button
             id="modal-confirm"
             onClick={handleStart}
             disabled={loading || !roomName.trim()}
-            className="btn-cta flex-1 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+            className="btn-cta flex-1 py-3 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {loading ? (
               <>
@@ -124,7 +132,8 @@ export default function RoomModal({ onConfirm, onClose }) {
             ) : (
               <>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                 </svg>
                 Launch Meeting
               </>
@@ -132,13 +141,6 @@ export default function RoomModal({ onConfirm, onClose }) {
           </button>
         </div>
       </div>
-
-      <style>{`
-        @keyframes fadeInScale {
-          from { opacity: 0; transform: scale(0.92) translateY(10px); }
-          to   { opacity: 1; transform: scale(1) translateY(0); }
-        }
-      `}</style>
     </div>
   )
 }

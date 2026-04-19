@@ -220,7 +220,7 @@ export default function Meeting() {
                          bg-[#1E1A3C]/95 border-b border-white/10 z-30 backdrop-blur-sm">
         {/* Logo */}
         <div className="flex items-center gap-2.5 min-w-[180px]">
-          <img src="/logo.svg" alt="Echo Meet" className="w-8 h-8" />
+          <img src="/logo.png" alt="Echo Meet" className="w-16 h-16 scale-125 object-contain" />
           <span className="font-bold text-sm">
             Echo <span className="text-[#E91E8C]">Meet</span>
           </span>
@@ -302,7 +302,7 @@ export default function Meeting() {
         {/* ── Init spinner ────────────────────────────────────────────── */}
         {phase === 'init' && (
           <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-            <img src="/logo.svg" alt="Echo Meet" className="w-14 h-14 mb-5 animate-pulse" />
+            <img src="/logo.png" alt="Echo Meet" className="w-28 h-28 scale-125 object-contain mb-5 animate-pulse" />
             <p className="text-white/60 text-sm">Starting camera…</p>
             <div className="flex gap-1.5 mt-4">
               {[0,1,2].map(i => (
