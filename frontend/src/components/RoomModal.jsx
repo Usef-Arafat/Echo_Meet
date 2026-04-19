@@ -56,7 +56,9 @@ export default function RoomModal({ onConfirm, onClose }) {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
-            <img src="/logo.png" alt="Echo Meet" className="w-16 h-16 scale-125 object-contain" />
+            <div className="w-10 h-10 flex items-center justify-center rounded-xl overflow-hidden bg-transparent dark:bg-white">
+              <img src="/logo.png" alt="Echo Meet" className="w-14 h-14 scale-[1.35] object-contain" />
+            </div>
             <div>
               <h2 className="text-lg font-bold text-[#1E1A3C] dark:text-white">New Meeting</h2>
               <p className="text-xs text-gray-400 dark:text-gray-500">Echo Meet</p>
