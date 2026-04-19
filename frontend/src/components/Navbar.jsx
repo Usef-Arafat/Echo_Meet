@@ -55,22 +55,22 @@ export default function Navbar({ onStartMeeting }) {
 
       {/* Nav Links */}
       <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-500 dark:text-gray-400">
-        <a href="#features"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Features</a>
-        <a href="#how-it-works" className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">How It Works</a>
-        <a href="#overview"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Overview</a>
-        <a href="#audience"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Our Audience</a>
+        <a href="/#features"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Features</a>
+        <a href="/#how-it-works" className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">How It Works</a>
+        <a href="/#overview"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Overview</a>
+        <a href="/#audience"    className="hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200">Our Audience</a>
       </div>
 
       {/* CTA & Theme Toggle */}
       <div className="flex items-center gap-3">
-        <button
+        <Link
           id="navbar-login"
-          onClick={onStartMeeting}
+          to="/login"
           className="hidden sm:block text-sm font-semibold text-gray-600 dark:text-gray-300
                      hover:text-[#1E1A3C] dark:hover:text-white transition-colors duration-200 px-2"
         >
           Login
-        </button>
+        </Link>
         <button
           id="navbar-start-meeting"
           onClick={onStartMeeting}
